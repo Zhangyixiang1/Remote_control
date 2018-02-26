@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                socket_tcp=new  Socket_Tcp(ip,port);
+                socket_tcp.addObserver(new Rev_Data());
                 new Thread(socket_tcp).start();
                 try {
                     Thread.sleep(2000);

@@ -23,7 +23,7 @@ public class Socket_Tcp extends Observable implements Runnable{
     int SERVER_PORT;
     //网络相关变量
     //最大帧长
-    private static final int MAX_DATA_PACKET_LENGTH = 1024;
+    private static final int MAX_DATA_PACKET_LENGTH = 20;
 
     //端口
     Socket Tcp_Socket;
@@ -87,7 +87,7 @@ public class Socket_Tcp extends Observable implements Runnable{
                             if (Buffer_Receive_Stream.available() > 0)
                             {
                                 Packet_Receive.setLength(Buffer_Receive_Stream.read(Packet_Receive.getData()));
-//                                System.out.println(new String(Packet_Receive.getData(),0,Packet_Receive.getLength()));
+   //                            System.out.println(new String(Packet_Receive.getData(),0,Packet_Receive.getLength()));
                                 //通知观察者
                                 setChanged();
                                 notifyObservers(Packet_Receive);
