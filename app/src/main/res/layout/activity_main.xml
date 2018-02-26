@@ -159,7 +159,7 @@
                 android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:background="#55ABEC"
-                android:text="发送"
+                android:text="退出"
                 android:textColor="@android:color/background_light"
                 android:textSize="50sp" />
         </LinearLayout>
